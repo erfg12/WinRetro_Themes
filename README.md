@@ -43,6 +43,7 @@ All files must be perminantly on your HDD. Do not delete them after customizatio
 
 
 ### SHOW LEGACY SYSTEM TRAY ICONS
+**IMPORTANT: This does not work on Windows 10 builds above 1903.**
 1. Run the "CustomizerGod.exe" program. Select the "Volume Icons" on the left menu.
 2. Select the icon, click the Replace button. Navigate to the "System Icons" folder. Select "conf_148.ico" or "confcp_116.ico"
 3. Select the "Network Icons" on the left menu.
