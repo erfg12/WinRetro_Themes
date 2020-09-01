@@ -21,7 +21,7 @@ All files must be perminantly on your HDD. Do not delete them after customizatio
 
 
 ### HOW TO CHANGE BOOTUP SCREEN
-1. Run "WinaeroTweaker-0.6.0.10-setup.exe" and install the program.
+1. Download [Winaero Tweaker](https://winaero.com). Install it.
 2. Run "Winaero Tweaker" and navigate on the left panel to "Boot and Logon" category. Click on "Boot Options".
 3. In the Appearance category on the right, uncheck "Enable Windows logo" and "Enable loading circle".
 4. Click "Disable Lock Screen" on the left panel. Check the "Disable Lock Screen" checkbox on the right.
@@ -77,8 +77,6 @@ A) Navigate to that .dll file, right click on it, select the Security tab, and g
 
 
 ### CREDITS
-Images and sounds taken from random Deviant Art pages and forums.
-
-Screen savers provided by screensaversplanet.com
-
-"CustomizerGod.exe" created by door2windows.com
+- Images and sounds taken from random Deviant Art pages and forums.
+- Screen savers provided by screensaversplanet.com
+- "CustomizerGod.exe" created by door2windows.com
