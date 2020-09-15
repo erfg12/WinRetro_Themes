@@ -9,7 +9,7 @@ All files must be perminantly on your HDD. Do not delete them after customizatio
 4. Click Screen Saver. Select from the drop down box any of the new Win9x screen savers you added.
 
 
-### HOW TO CREATE STARTUP/SHUTDOWN MUSIC_
+### HOW TO CREATE STARTUP/SHUTDOWN MUSIC
 1. Start the "Shutdown Sound.exe" program. It will be minimized to your system tray. Click on the icon to show it.
 2. Select your startup and shutdown sounds. Minimize the program when done.
 3. Open the Control Panel go to Administrative Tools and Task Scheduler (or just search for Task Scheduler with Cortana)
@@ -49,12 +49,17 @@ All files must be perminantly on your HDD. Do not delete them after customizatio
 
 
 ### SHOW LEGACY SYSTEM TRAY ICONS
-**IMPORTANT: This does not work on Windows 10 builds above 1903.**
+**For Windows 10 builds below 1903.**
 1. Run the "CustomizerGod.exe" program. Select the "Volume Icons" on the left menu.
 2. Select the icon, click the Replace button. Navigate to the "System Icons" folder. Select "conf_148.ico" or "confcp_116.ico"
 3. Select the "Network Icons" on the left menu.
 4. Select the icon, click the Replace button. Navigate to the "System Icons" folder. Select "mprserv_121.ico".
 5. You can replace any other system icons here as well.
+
+**For Windows 10 builds above 1903. (untested, found on forums)**
+- The network icons in the pnidue.dll file is still located in system32, so Customizer God works as-is for changing those.
+- If you want to change the volume icons, copy the SndVolSSO.dll.mun file from the SystemResources folder to another directory. Open the copied file with CustomizerGod using the "Open File" button. Make sure to change the option so it can see all files. Once selected you can change the icons like normal. Repeat the same process for any other .dll.mun files you want to change.
+- Now you need to overwrite the files in the SystemResources folder with the newly modified ones. Boot into Hiren's BootCD. Simple click and drag to overwrite, then restart.
 
 
 ### HOW TO ADD AND CHANGE DESKTOP ICONS
