@@ -47,6 +47,10 @@ All files must be perminantly on your HDD. Do not delete them after customizatio
 
 
 ### SMALL TASKBAR BUTTONS WITH TEXT
+**AUTOMATIC WAY:**
+1. Run `Small Taskbar Buttons With Text.bat`
+
+**MANUAL WAY:**
 1. Right click on the taskbar, select "Taskbar settings".
 2. Turn on "Use small taskbar buttons". 
 2. Click the dropdown "Combine taskbar buttons", select "Never".
@@ -67,6 +71,10 @@ All files must be perminantly on your HDD. Do not delete them after customizatio
 
 
 ### HOW TO ADD AND CHANGE DESKTOP ICONS
+**AUTOMATIC WAY:**
+1. Run `Show All Desktop Icons.bat` and `Change Desktop Icons.bat`
+
+**MANUAL WAY:**
 1. Right click on the Desktop, select Personalize.
 2. Click Themes on the left menu, select Desktop icon settings.
 3. Check the checkboxes for icons you want to add to your desktop.
