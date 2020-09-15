@@ -2,6 +2,10 @@
 All files must be perminantly on your HDD. Do not delete them after customization!
 
 
+![](https://i.imgur.com/vDHapbK.png)
+
+# INSTRUCTIONS
+
 ### HOW TO ADD WIN9x SCREENSAVERS
 1. Copy and paste the .scr files from the "Screensavers" folder in to your C:\Windows\SYSTEM32 folder.
 2. Right click on the Desktop, select Personalize.
