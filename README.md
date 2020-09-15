@@ -35,11 +35,11 @@ All files must be perminantly on your HDD. Do not delete them after customizatio
 1. Download [Open Shell Menu](https://github.com/Open-Shell/Open-Shell-Menu). Install it.
 2. Right click on the start button (lower left corner). Click settings.
 3. Click on the Classic style radio button.
+4. Click the Backup drop down, Load from XML File, select the "Menu Settings.xml" file.
 4. Check the "Replace Start button" checkbox. Check the "Custom" checkbox. Select "Windows 9x Start Button.png"
 5. Check the "Show all settings" in the top middle section of the software UI. Click "Taskbar" tab.
-6. Check the "Customize taskbar" checkbox. Change taskbar color to BFBFC1. Change Taskbar text color to 000000.
-7. Press OK to close. Right click on your Desktop and select Personalize. Select Colors on the left menu.
-8. Select one of the grey colors. Make sure the following options are select:
+6. Press OK to close. Right click on your Desktop and select Personalize. Select Colors on the left menu.
+7. Select one of the grey colors. Make sure the following options are select:
 - "Make Start, taskbar, and action center transparent": Off
 - "Show color on Start, taskbar, and action center": On
 - "Show color on title bar": On
