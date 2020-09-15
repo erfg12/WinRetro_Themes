@@ -42,6 +42,12 @@ All files must be perminantly on your HDD. Do not delete them after customizatio
 - "Choose your app mode": Light
 
 
+### SMALL TASKBAR BUTTONS WITH TEXT
+1. Right click on the taskbar, select "Taskbar settings".
+2. Turn on "Use small taskbar buttons". 
+2. Click the dropdown "Combine taskbar buttons", select "Never".
+
+
 ### SHOW LEGACY SYSTEM TRAY ICONS
 **IMPORTANT: This does not work on Windows 10 builds above 1903.**
 1. Run the "CustomizerGod.exe" program. Select the "Volume Icons" on the left menu.
