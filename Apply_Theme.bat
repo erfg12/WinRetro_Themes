@@ -33,7 +33,7 @@ REG ADD "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\CL
 REG ADD "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\DefaultIcon" /VE /D %DOC_PATH%\shell32_19.ico /F
 
 :: Apply open-shell-menu theme
-"C:\Program Files\Open-Shell\StartMenu" -xml "%cd%\WIN 9X THEME\Menu Settings.xml"
+"C:\Program Files\Open-Shell\StartMenu" -xml "%userprofile%\documents\Themes\Win9x\Menu Settings.xml"
 
 :: Change wallpaper
 reg add "HKCU\Control Panel\Desktop" /v Wallpaper /f /t REG_SZ /d  "%userprofile%\documents\Themes\Win9x\Wallpapers\I4IF27V.bmp"
