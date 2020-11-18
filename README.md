@@ -64,7 +64,7 @@ NOTE: It says Windows 7, but it works for Windows 10
 **Q)** "CustomizerGod.exe" gives me an error about a permissions issue on a .dll file. <br>
 **A)** Navigate to that .dll file, right click on it, select the Security tab, and give all permissions to all groups.
 
-**Q)** How do I remove the the theme? <br>
+**Q)** How do I remove the theme? <br>
 **A)** Run the Remove_(THEME)_Theme.bat file located in your `%userprofile%\documents\Themes\` directory
 
 
