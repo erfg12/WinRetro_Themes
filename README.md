@@ -1,10 +1,13 @@
 ## THIS PACK MADE SPECIFICALLY FOR WINDOWS 10
-Double click on the `Apply_Theme.bat` file. This will copy the theme files 
-to your Documents/Themes folder and apply taskbar, start button, start menu and desktop changes automatically.
+Double click on the `Apply_(THEME)_Theme.bat` file. This will copy the theme files 
+to your `%userprofile%/Documents/Themes` folder and apply taskbar, start button, start menu and desktop changes automatically.
 Any additional changes you may want are noted below.
 
-
 ![](https://i.imgur.com/vDHapbK.png)
+
+![](https://i.imgur.com/KZ9AUYB.jpg)
+
+![](https://i.imgur.com/xhTIrgV.jpg)
 
 # ADDITIONAL CHANGES
 
@@ -61,6 +64,10 @@ NOTE: It says Windows 7, but it works for Windows 10
 Q) "CustomizerGod.exe" gives me an error about a permissions issue on a .dll file.
 
 A) Navigate to that .dll file, right click on it, select the Security tab, and give all permissions to all groups.
+
+Q) How do I remove the the theme?
+
+A) Run the Remove_(THEME)_Theme.bat file located in your `%userprofile%\documents\Themes\` directory
 
 
 ### CREDITS
