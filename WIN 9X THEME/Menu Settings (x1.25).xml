@@ -42,7 +42,7 @@
 	</SkinOptionsC2>
 	<EnableStartButton value="1"/>
 	<StartButtonType value="CustomButton"/>
-	<StartButtonPath value="%USERPROFILE%\Documents\Themes\Win9x\start-button.png"/>
+	<StartButtonPath value="%USERPROFILE%\Documents\Themes\Win9x\start-button (x1.25).png"/>
 	<StartButtonSize value="0"/>
 	<StartButtonAlign value="0"/>
 	<CustomTaskbar value="1"/>

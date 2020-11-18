@@ -3,6 +3,8 @@
 echo - Be sure to install Open-Shell-Menu before running this file. https://github.com/Open-Shell/Open-Shell-Menu/releases
 echo - This batch file will copy this folder to %userprofile%\documents\Themes\Win9x\
 
+for /F "tokens=3" %%A in ('reg query "HKCU\Control Panel\Desktop\PerMonitorSettings" /s') DO if %%A GEQ 0x3 goto :SCALE_ERROR
+
 setlocal
 :PROMPT
 SET /P AREYOUSURE=Ready to start? Y/[N]:
@@ -34,7 +36,7 @@ REG ADD "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\CL
 REG ADD "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\DefaultIcon" /VE /D %DOC_PATH%\shell32_19.ico /F
 
 :: Apply open-shell-menu theme
-"C:\Program Files\Open-Shell\StartMenu" -xml "%userprofile%\documents\Themes\Win9x\Menu Settings.xml"
+for /F "tokens=3" %%A in ('reg query "HKCU\Control Panel\Desktop\PerMonitorSettings" /s') DO if %%A == 0x0 ( "C:\Program Files\Open-Shell\StartMenu" -xml "%userprofile%\documents\Themes\Win9x\Menu Settings.xml" ) else if %%A == 0x1 ( "C:\Program Files\Open-Shell\StartMenu" -xml "%userprofile%\documents\Themes\Win9x\Menu Settings (x1.25).xml" )
 
 :: Change wallpaper
 reg add "HKCU\Control Panel\Desktop" /v Wallpaper /f /t REG_SZ /d  "%userprofile%\documents\Themes\Win9x\Wallpapers\I4IF27V.bmp"
@@ -46,6 +48,12 @@ echo You can now delete this folder.
 RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters
 taskkill /f /im explorer.exe
 start explorer.exe
+
+:SCALE_ERROR
+@echo: 
+echo ERROR: Your monitor resolution scale is set too high! Lower it to 100 percent or 125 percent in settings.
+@echo: 
+pause
 
 :END
 endlocal
