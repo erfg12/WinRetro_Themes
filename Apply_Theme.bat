@@ -1,19 +1,39 @@
 @echo off
 
 echo - Be sure to install Open-Shell-Menu before running this file. https://github.com/Open-Shell/Open-Shell-Menu/releases
-echo - This batch file will copy this folder to %userprofile%\documents\Themes\Win9x\
 
 for /F "tokens=3" %%A in ('reg query "HKCU\Control Panel\Desktop\PerMonitorSettings" /s') DO if %%A GEQ 0x3 goto :SCALE_ERROR
 
 setlocal
+:PROMPT
+SET /P THEMEPICK=Which theme do you want? XP, Vista or 9x:
+
+IF /I "%THEMEPICK%" NEQ "9x" GOTO 9x
+IF /I "%THEMEPICK%" NEQ "XP" GOTO XP
+IF /I "%THEMEPICK%" NEQ "Vista" GOTO Vista
+
+:9x
+set SHORTNAME="Win9x"
+set LONGNAME="Windows9x"
+
+:Vista
+set SHORTNAME="WinVista"
+set LONGNAME="WindowsVista"
+
+:XP
+set SHORTNAME="WinXP"
+set LONGNAME="WindowsXP"
+
+echo - This batch file will copy this folder to %userprofile%\documents\Themes\%SHORTNAME%\
+
 :PROMPT
 SET /P AREYOUSURE=Ready to start? Y/[N]:
 
 IF /I "%AREYOUSURE%" NEQ "Y" GOTO END
 
 :: Copy files to directory Themes folder
-xcopy /s "%CD%\WIN 9X THEME" %userprofile%\documents\Themes\Win9x\
-copy "%CD%\Apply_Theme.bat" "%userprofile%\documents\Themes\Apply_Windows9x_Theme.bat"
+xcopy /s "%CD%\WIN 9X THEME" "%userprofile%\documents\Themes\%SHORTNAME%\"
+copy "%CD%\Apply_Theme.bat" "%userprofile%\documents\Themes\Apply_%LONGNAME%_Theme.bat"
 copy "%CD%\Remove_Theme.bat" "%userprofile%\documents\Themes\Remove_Theme.bat"
 
 :: Small taskbar buttons with text
@@ -27,7 +47,7 @@ reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons
 reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel /v {F02C1A0D-BE21-4350-88B0-7367FC96EF3C} /t REG_DWORD /d 0 /f
 
 :: Change desktop icons
-set DOC_PATH="%userprofile%\documents\Themes\Win9x\System Icons"
+set DOC_PATH="%userprofile%\documents\Themes\%SHORTNAME%\System Icons"
 REG ADD "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\DefaultIcon" /VE /D %DOC_PATH%\explorer_100.ico /F
 REG ADD "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{59031A47-3F72-44A7-89C5-5595FE6B30EE}\DefaultIcon" /VE /D %DOC_PATH%\inetcpl_1319.ico /F
 REG ADD "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon" /VE /t REG_EXPAND_SZ /D %DOC_PATH%\shell32_32.ico /F
@@ -36,11 +56,11 @@ REG ADD "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\CL
 REG ADD "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\DefaultIcon" /VE /D %DOC_PATH%\shell32_19.ico /F
 
 :: Apply open-shell-menu theme
-for /F "tokens=3" %%A in ('reg query "HKCU\Control Panel\Desktop\PerMonitorSettings" /s') DO if %%A == 0x0 ( "C:\Program Files\Open-Shell\StartMenu" -xml "%userprofile%\documents\Themes\Win9x\Menu Settings.xml" ) else if %%A == 0x1 ( "C:\Program Files\Open-Shell\StartMenu" -xml "%userprofile%\documents\Themes\Win9x\Menu Settings (x1.25).xml" )
+for /F "tokens=3" %%A in ('reg query "HKCU\Control Panel\Desktop\PerMonitorSettings" /s') DO if %%A == 0x0 ( "C:\Program Files\Open-Shell\StartMenu" -xml "%userprofile%\documents\Themes\%SHORTNAME%\Menu Settings.xml" ) else if %%A == 0x1 ( "C:\Program Files\Open-Shell\StartMenu" -xml "%userprofile%\documents\Themes\%SHORTNAME%\Menu Settings (x1.25).xml" )
 
 :: Change wallpaper
-reg add "HKCU\Control Panel\Desktop" /v Wallpaper /f /t REG_SZ /d  "%userprofile%\documents\Themes\Win9x\Wallpapers\I4IF27V.bmp"
-"%userprofile%\documents\Themes\Win9x\win9x.deskthemepack"
+reg add "HKCU\Control Panel\Desktop" /v Wallpaper /f /t REG_SZ /d  "%userprofile%\documents\Themes\%SHORTNAME%\Wallpapers\I4IF27V.bmp"
+"%userprofile%\documents\Themes\%SHORTNAME%\%SHORTNAME%.deskthemepack"
 
 echo You can now delete this folder.
 
