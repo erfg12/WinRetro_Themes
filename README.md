@@ -60,14 +60,12 @@ NOTE: It says Windows 7, but it works for Windows 10
 - Now you need to overwrite the files in the SystemResources folder with the newly modified ones. Boot into Hiren's BootCD. Simple click and drag to overwrite, then restart.
 
 
-### TROUBLESHOOTING
-Q) "CustomizerGod.exe" gives me an error about a permissions issue on a .dll file.
+### TROUBLESHOOTING 
+**Q)** "CustomizerGod.exe" gives me an error about a permissions issue on a .dll file. <br>
+**A)** Navigate to that .dll file, right click on it, select the Security tab, and give all permissions to all groups.
 
-A) Navigate to that .dll file, right click on it, select the Security tab, and give all permissions to all groups.
-
-Q) How do I remove the the theme?
-
-A) Run the Remove_(THEME)_Theme.bat file located in your `%userprofile%\documents\Themes\` directory
+**Q)** How do I remove the the theme? <br>
+**A)** Run the Remove_(THEME)_Theme.bat file located in your `%userprofile%\documents\Themes\` directory
 
 
 ### CREDITS
