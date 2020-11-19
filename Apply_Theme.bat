@@ -5,34 +5,30 @@ echo - Be sure to install Open-Shell-Menu before running this file. https://gith
 for /F "tokens=3" %%A in ('reg query "HKCU\Control Panel\Desktop\PerMonitorSettings" /s') DO if %%A GEQ 0x3 goto :SCALE_ERROR
 
 setlocal
-:PROMPT
 SET /P THEMEPICK=Which theme do you want? XP, Vista or 9x:
 
-IF /I "%THEMEPICK%" NEQ "9x" GOTO 9x
-IF /I "%THEMEPICK%" NEQ "XP" GOTO XP
-IF /I "%THEMEPICK%" NEQ "Vista" GOTO Vista
-
-:9x
-set SHORTNAME="Win9x"
-set LONGNAME="Windows9x"
-
-:Vista
-set SHORTNAME="WinVista"
-set LONGNAME="WindowsVista"
-
-:XP
-set SHORTNAME="WinXP"
-set LONGNAME="WindowsXP"
+IF /I "%THEMEPICK%" EQU "9x" (
+    set SHORTNAME=Win9x
+    set LONGNAME=Windows9x
+    set DIRNAME=WIN 9X THEME
+) ELSE IF /I "%THEMEPICK%" EQU "XP" (
+    set SHORTNAME=WinXP
+    set LONGNAME=WindowsXP
+    set DIRNAME=WIN XP THEME
+) ELSE IF /I "%THEMEPICK%" EQU "Vista" (
+    set SHORTNAME=WinVista
+    set LONGNAME=WindowsVista
+    set DIRNAME=WIN VISTA THEME
+)
 
 echo - This batch file will copy this folder to %userprofile%\documents\Themes\%SHORTNAME%\
 
-:PROMPT
 SET /P AREYOUSURE=Ready to start? Y/[N]:
 
 IF /I "%AREYOUSURE%" NEQ "Y" GOTO END
 
 :: Copy files to directory Themes folder
-xcopy /s "%CD%\WIN 9X THEME" "%userprofile%\documents\Themes\%SHORTNAME%\"
+xcopy /s "%CD%\%DIRNAME%" "%userprofile%\documents\Themes\%SHORTNAME%\"
 copy "%CD%\Apply_Theme.bat" "%userprofile%\documents\Themes\Apply_%LONGNAME%_Theme.bat"
 copy "%CD%\Remove_Theme.bat" "%userprofile%\documents\Themes\Remove_Theme.bat"
 

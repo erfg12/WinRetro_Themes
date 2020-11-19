@@ -1,9 +1,21 @@
 @echo off
 
-echo - Uninstall Open-Shell!
+echo - Remember to uninstall Open-Shell!
 
 setlocal
-:PROMPT
+SET /P THEMEPICK=Which theme do you want to remove? XP, Vista or 9x:
+
+IF /I "%THEMEPICK%" EQU "9x" (
+    set SHORTNAME=Win9x
+    set LONGNAME=Windows9x
+) ELSE IF /I "%THEMEPICK%" EQU "XP" (
+    set SHORTNAME=WinXP
+    set LONGNAME=WindowsXP
+) ELSE IF /I "%THEMEPICK%" EQU "Vista" (
+    set SHORTNAME=WinVista
+    set LONGNAME=WindowsVista
+)
+
 SET /P AREYOUSURE=Ready to start? Y/[N]:
 
 IF /I "%AREYOUSURE%" NEQ "Y" GOTO END
@@ -29,14 +41,14 @@ REG ADD "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\CL
 REG ADD "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\DefaultIcon" /VE /D "C:\WINDOWS\System32\imageres.dll,-25" /F
 
 :: Change wallpaper
-"%userprofile%\documents\Themes\WinVista\restore.deskthemepack"
+"%userprofile%\documents\Themes\%SHORTNAME%\restore.deskthemepack"
 
 :: Reload explorer to show applied changes
 RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters
 taskkill /f /im explorer.exe
 start explorer.exe
 
-echo - Delete the folder %userprofile%\documents\Themes\WinVista\
+echo - Delete the folder %userprofile%\documents\Themes
 
 :END
 endlocal
