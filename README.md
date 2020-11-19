@@ -1,5 +1,5 @@
 ## THIS PACK MADE SPECIFICALLY FOR WINDOWS 10
-Double click on the `Apply_(THEME)_Theme.bat` file. This will copy the theme files 
+Double click on the `Apply_Theme.bat` file. This will copy the theme files 
 to your `%userprofile%/Documents/Themes` folder and apply taskbar, start button, start menu and desktop changes automatically.
 Any additional changes you may want are noted below.
 
@@ -65,7 +65,7 @@ NOTE: It says Windows 7, but it works for Windows 10
 **A)** Navigate to that .dll file, right click on it, select the Security tab, and give all permissions to all groups.
 
 **Q)** How do I remove the theme? <br>
-**A)** Run the Remove_(THEME)_Theme.bat file located in your `%userprofile%\documents\Themes\` directory
+**A)** Run the Remove_Theme.bat file located in your `%userprofile%\documents\Themes\` directory
 
 
 ### CREDITS
