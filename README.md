@@ -57,7 +57,7 @@ Any additional changes you may want are noted below.
 2. Double click on `Shutdown Sound.exe`. It will be minimized to your system tray. Click on the tray icon to dispay the GUI.
 3. Select your startup and shutdown sounds. Minimize the program when done.
 
-</deetails>
+</details>
 
 <details>
   
