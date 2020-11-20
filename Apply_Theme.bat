@@ -1,11 +1,25 @@
 @echo off
 
-echo - Be sure to install Open-Shell-Menu before running this file. https://github.com/Open-Shell/Open-Shell-Menu/releases
+if exist "C:\Program Files\Open-Shell\StartMenu.exe" (
+    ::echo Open-Shell-Menu is installed!
+    echo.
+) else (
+    echo ERROR: Install Open-Shell-Menu before running this file! https://github.com/Open-Shell/Open-Shell-Menu/releases
+    echo It should be installed to "C:\Program Files\Open-Shell"
+    pause
+    goto :END
+)
 
-for /F "tokens=3" %%A in ('reg query "HKCU\Control Panel\Desktop\PerMonitorSettings" /s') DO if %%A GEQ 0x3 goto :SCALE_ERROR
+for /F "tokens=3" %%A in ('reg query "HKCU\Control Panel\Desktop\PerMonitorSettings" /s') DO if %%A GEQ 0x2 (
+    @echo: 
+    echo ERROR: Your monitor resolution scale is set too high! Lower it to 100 percent or 125 percent in settings.
+    @echo: 
+    pause
+    goto :END 
+)
 
 setlocal
-SET /P THEMEPICK=Which theme do you want? XP, Vista or 9x:
+SET /P THEMEPICK=Which theme do you want installed? XP, Vista or 9x:
 
 IF /I "%THEMEPICK%" EQU "9x" (
     set SHORTNAME=Win9x
@@ -64,12 +78,6 @@ echo You can now delete this folder.
 RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters
 taskkill /f /im explorer.exe
 start explorer.exe
-
-:SCALE_ERROR
-@echo: 
-echo ERROR: Your monitor resolution scale is set too high! Lower it to 100 percent or 125 percent in settings.
-@echo: 
-pause
 
 :END
 endlocal

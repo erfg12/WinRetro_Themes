@@ -1,6 +1,12 @@
 @echo off
 
-echo - Remember to uninstall Open-Shell!
+if exist "C:\Program Files\Open-Shell\StartMenu.exe" (
+	echo.
+	echo ERROR: Uninstall Open-Shell-Menu first from control panel or settings.
+	echo.
+	pause
+	goto :END
+)
 
 setlocal
 SET /P THEMEPICK=Which theme do you want to remove? XP, Vista or 9x:
