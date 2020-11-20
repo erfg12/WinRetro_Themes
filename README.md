@@ -3,49 +3,88 @@ Double click on the `Apply_Theme.bat` file. This will copy the theme files
 to your `%userprofile%/Documents/Themes` folder and apply taskbar, start button, start menu and desktop changes automatically.
 Any additional changes you may want are noted below.
 
-![](https://i.imgur.com/vDHapbK.png)
+# SCREENSHOTS
 
-![](https://i.imgur.com/KZ9AUYB.jpg)
+<details>
+  <summary>Windows 9X (95, 95, ME)</summary>
+  
+  ![](https://i.imgur.com/vDHapbK.png)
+  
+</details>
 
-![](https://i.imgur.com/xhTIrgV.jpg)
+<details>
+  <summary>Windows XP</summary>
+  
+  ![](https://i.imgur.com/KZ9AUYB.jpg)
+  
+</details>
+
+<details>
+  <summary>Windows Vista</summary>
+  
+  ![](https://i.imgur.com/xhTIrgV.jpg)
+  
+</details>
 
 # ADDITIONAL CHANGES
 
-### ADD QUICK LAUNCH APPS
-- https://support.microsoft.com/en-us/help/975784/guided-help-enable-the-quick-launch-bar-in-windows-7
+<details>
+  <summary>ADD QUICK LAUNCH APPS</summary>
+  
+  - https://support.microsoft.com/en-us/help/975784/guided-help-enable-the-quick-launch-bar-in-windows-7
 
-NOTE: It says Windows 7, but it works for Windows 10
+  NOTE: It says Windows 7, but it works for Windows 10
+  
+</details>
 
+<details>
+  
+  <summary>CHANGE SCREENSAVERS</summary>
+  
+  1. You can add screen saver files by copy/pasting the .scr files in to your `C:\Windows\SYSTEM32` folder.
+  2. Right click on the Desktop, select Personalize.
+  3. Click Themes on the left menu, select Theme settings.
+  4. Click Screen Saver. Select from the drop down box any of the new Win9x screen savers you added.
+  
+</details>
 
-### CHANGE SCREENSAVERS
-1. You can add screen saver files by copy/pasting the .scr files in to your `C:\Windows\SYSTEM32` folder.
-2. Right click on the Desktop, select Personalize.
-3. Click Themes on the left menu, select Theme settings.
-4. Click Screen Saver. Select from the drop down box any of the new Win9x screen savers you added.
+<details>
+  
+  <summary>STARTUP AND SHUTDOWN SOUNDS</summary>
 
-
-### STARTUP AND SHUTDOWN SOUNDS
 - Download ShutDownSound from [GitHub/ShutDownSound](https://github.com/newagesoftwareLLC/shutdownSound/releases).
 1. Unzip the contents to the StartUp directory: `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp`
 2. Double click on `Shutdown Sound.exe`. It will be minimized to your system tray. Click on the tray icon to dispay the GUI.
 3. Select your startup and shutdown sounds. Minimize the program when done.
 
+</deetails>
 
-### CHANGE BOOTUP SCREEN
+<details>
+  
+  <summary>CHANGE BOOTUP SCREEN</summary>
+
 - Download [Winaero Tweaker](https://winaero.com). Install it.
 1. Run "Winaero Tweaker" and navigate on the left panel to "Boot and Logon" category. Click on "Boot Options".
 2. In the Appearance category on the right, uncheck "Enable Windows logo" and "Enable loading circle".
 3. Click "Disable Lock Screen" on the left panel. Check the "Disable Lock Screen" checkbox on the right.
 
+</details>
 
-### CHANGING THE WALLPAPER
+<details>
+  
+  <summary>CHANGING THE WALLPAPER</summary>
+
 1. Right click on the Desktop, select Personalize.
 2. Click Background on the left menu if not already selected.
 3. Select Picture from the dropdown box.
 4. Click the Browse button and navigate to "Wallpapers" folder and select which one you want.
 
+</details>
 
-### LEGACY SYSTEM TRAY ICONS
+<details>
+  
+  <summary>LEGACY SYSTEM TRAY ICONS</summary>
+
 - Download CustomizerGod from [door2windows.com](http://www.door2windows.com/). Install it.
 **For Windows 10 builds below 1903.**
 1. Run the "CustomizerGod.exe" program. Select the "Volume Icons" on the left menu.
@@ -59,6 +98,7 @@ NOTE: It says Windows 7, but it works for Windows 10
 - If you want to change the volume icons, copy the SndVolSSO.dll.mun file from the SystemResources folder to another directory. Open the copied file with CustomizerGod using the "Open File" button. Make sure to change the option so it can see all files. Once selected you can change the icons like normal. Repeat the same process for any other .dll.mun files you want to change.
 - Now you need to overwrite the files in the SystemResources folder with the newly modified ones. Boot into Hiren's BootCD. Simple click and drag to overwrite, then restart.
 
+</details>
 
 ### TROUBLESHOOTING 
 **Q)** "CustomizerGod.exe" gives me an error about a permissions issue on a .dll file. <br>
