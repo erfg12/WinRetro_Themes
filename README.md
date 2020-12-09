@@ -83,6 +83,14 @@ Any additional changes you may want are noted below.
 
 <details>
   
+  <summary>AOL Internet Browser</summary>
+
+Check out my other retro inspired AOL 4.0 emulated web browser. https://github.com/erfg12/AOL_4.0_Emu
+
+</details>
+
+<details>
+  
   <summary>LEGACY SYSTEM TRAY ICONS</summary>
 
 - Download CustomizerGod from [door2windows.com](http://www.door2windows.com/). Install it.
