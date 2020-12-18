@@ -90,7 +90,7 @@ Check out my other retro inspired AOL 4.0 emulated web browser. https://github.c
 </details>
 
 <details>
-  <summary></summary>
+  <summary>CLASSIC FILE EXPLORER</summary>
   
   Download [OldNewExplorer](https://m.majorgeeks.com/files/details/oldnewexplorer.html), unzip somewhere to keep it perminantly. Maybe AppData/Roaming or Documents folder.
   - Check almost all the checkboxes. Click the Install button, log off and on to see the new explorer window.
