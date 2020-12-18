@@ -94,9 +94,9 @@ Check out my other retro inspired AOL 4.0 emulated web browser. https://github.c
   <summary>CLASSIC TITLEBAR BUTTONS (Not Free)</summary>
 
 Download and install [WindowsBlinds](https://www.stardock.com/products/windowblinds/).
-Windows 9x - [The Windows Classic Theme](https://www.wincustomize.com/explore/windowblinds/9233/).
-Windows XP - [eXperience](https://www.wincustomize.com/explore/windowblinds/9262/) Theme.
-Windows Vista - [Vista Plus](https://www.wincustomize.com/explore/windowblinds/5814/).
+- Windows 9x - [The Windows Classic Theme](https://www.wincustomize.com/explore/windowblinds/9233/).
+- Windows XP - [eXperience](https://www.wincustomize.com/explore/windowblinds/9262/) Theme.
+- Windows Vista - [Vista Plus](https://www.wincustomize.com/explore/windowblinds/5814/) Theme.
 
 </details>
 
