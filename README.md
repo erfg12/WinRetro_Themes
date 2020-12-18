@@ -91,6 +91,15 @@ Check out my other retro inspired AOL 4.0 emulated web browser. https://github.c
 
 <details>
   
+  <summary>CLASSIC TITLEBAR BUTTONS (Not Free)</summary>
+
+1. Download and install [WindowsBlinds](https://www.stardock.com/products/windowblinds/).
+2. Download and apply [The Windows Classic Theme](https://www.wincustomize.com/explore/windowblinds/9233/)
+
+</details>
+
+<details>
+  
   <summary>LEGACY SYSTEM TRAY ICONS</summary>
 
 - Download CustomizerGod from [door2windows.com](http://www.door2windows.com/). Install it.
