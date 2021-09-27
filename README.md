@@ -6,7 +6,7 @@ Any additional changes you may want are noted below.
 # SCREENSHOTS
 
 <details>
-  <summary>Windows 9X (95, 95, ME)</summary>
+  <summary>Windows 9X (95, 98, ME)</summary>
   
   ![](https://i.imgur.com/vDHapbK.png)
   
@@ -83,7 +83,7 @@ Any additional changes you may want are noted below.
 
 <details>
   
-  <summary>AOL Internet Browser</summary>
+  <summary>AOL WEB BROWSER</summary>
 
 Check out my other retro inspired AOL 4.0 emulated web browser. https://github.com/erfg12/AOL_4.0_Emu
 
