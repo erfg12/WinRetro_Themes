@@ -1,6 +1,10 @@
 ## THIS PACK MADE SPECIFICALLY FOR WINDOWS 10
-Double click on the `Apply_Theme.bat` file. This will copy the theme files 
+
+# HOW TO INSTALL
+1. Unzip contents to a folder.
+2. Double click on the `Apply_Theme.bat` file. This will copy the theme files 
 to your `%userprofile%/Documents/Themes` folder and apply taskbar, start button, start menu and desktop changes automatically.
+
 Any additional changes you may want are noted below.
 
 # SCREENSHOTS
