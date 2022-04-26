@@ -11,11 +11,13 @@ if exist "C:\Program Files\Open-Shell\StartMenu.exe" (
 )
 
 for /F "tokens=3" %%A in ('reg query "HKCU\Control Panel\Desktop\PerMonitorSettings" /s') DO if %%A GEQ 0x2 (
+if %%A LEQ 0x20 (
     @echo: 
     echo ERROR: Your monitor resolution scale is set too high! Lower it to 100 percent or 125 percent in settings.
     @echo: 
     pause
     goto :END 
+    )
 )
 
 setlocal
